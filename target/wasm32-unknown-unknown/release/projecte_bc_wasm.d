@@ -1,0 +1,1 @@
+/home/isard/BlockchainCurs/projecte-bc/target/wasm32-unknown-unknown/release/projecte_bc_wasm.wasm: /home/isard/BlockchainCurs/projecte-bc/src/projecte_bc.rs /home/isard/BlockchainCurs/projecte-bc/wasm/src/lib.rs

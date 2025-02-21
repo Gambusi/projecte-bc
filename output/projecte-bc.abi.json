@@ -1,0 +1,112 @@
+{
+    "buildInfo": {
+        "rustc": {
+            "version": "1.84.1",
+            "commitHash": "e71f9a9a98b0faf423844bf0ba7438f29dc27d58",
+            "commitDate": "2025-01-27",
+            "channel": "Stable",
+            "short": "rustc 1.84.1 (e71f9a9a9 2025-01-27)"
+        },
+        "contractCrate": {
+            "name": "projecte-bc",
+            "version": "0.0.0"
+        },
+        "framework": {
+            "name": "multiversx-sc",
+            "version": "0.56.1"
+        }
+    },
+    "name": "AttendanceTrackerSc",
+    "constructor": {
+        "inputs": [
+            {
+                "name": "total_classes",
+                "type": "u64"
+            }
+        ],
+        "outputs": []
+    },
+    "endpoints": [
+        {
+            "name": "claim_attendance",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "class_code",
+                    "type": "bytes"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "deposit",
+            "mutability": "mutable",
+            "payableInTokens": [
+                "EGLD"
+            ],
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "name": "getAttendanceStatus",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "student",
+                    "type": "Address"
+                },
+                {
+                    "name": "class_code",
+                    "type": "bytes"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "AttendanceStatus"
+                }
+            ]
+        },
+        {
+            "name": "getEgldTransactions",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "student",
+                    "type": "Address"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "u64"
+                }
+            ]
+        },
+        {
+            "name": "getTotalClasses",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "u64"
+                }
+            ]
+        }
+    ],
+    "esdtAttributes": [],
+    "hasCallback": false,
+    "types": {
+        "AttendanceStatus": {
+            "type": "enum",
+            "variants": [
+                {
+                    "name": "NotClaimed",
+                    "discriminant": 0
+                },
+                {
+                    "name": "Claimed",
+                    "discriminant": 1
+                }
+            ]
+        }
+    }
+}

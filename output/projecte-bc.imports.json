@@ -1,0 +1,23 @@
+[
+  "bigIntAdd",
+  "bigIntGetCallValue",
+  "bigIntSetInt64",
+  "checkNoPayment",
+  "getNumArguments",
+  "mBufferAppend",
+  "mBufferAppendBytes",
+  "mBufferEq",
+  "mBufferGetArgument",
+  "mBufferGetByteSlice",
+  "mBufferGetLength",
+  "mBufferSetBytes",
+  "mBufferStorageLoad",
+  "mBufferStorageStore",
+  "managedCaller",
+  "managedGetMultiESDTCallValue",
+  "managedSignalError",
+  "managedTransferValueExecute",
+  "signalError",
+  "smallIntFinishUnsigned",
+  "smallIntGetUnsignedArgument"
+]
